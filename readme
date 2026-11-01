@@ -1,99 +1,78 @@
-# Handwritten Digit Recognition
+# ✨ Handwritten Digit Recognition
 
-A handwritten digit recognition web application built using **Convolutional Neural Networks (CNN)**, TensorFlow, and Streamlit.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/CNN-Deep%20Learning-8A2BE2?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+</p>
 
-## Project Overview
+<p align="center">
+  🚀 <strong>Draw a digit. Let AI recognize it!</strong>
+</p>
 
-This project recognizes handwritten digits (0–9) drawn by users on an interactive canvas. A trained CNN model processes the drawing and predicts the digit with a confidence score.
-
-## Features
-
-- Interactive drawing canvas
-- Real-time digit prediction
-- Prediction confidence scores
-- Probability visualization for all 10 digits
-- Processed image preview
-
-## Model Performance
-
-- Dataset: MNIST
-- Training images: 60,000
-- Testing images: 10,000
-- Image dimensions: 28 × 28 pixels
-- Test accuracy: **99.1%**
-
-*Accuracy is measured on the MNIST test dataset.*
-
-## Technologies Used
-
-- Python
-- TensorFlow / Keras
-- NumPy
-- OpenCV
-- Streamlit
-- Streamlit Drawable Canvas
-
-## Project Structure
-
-```text
-handwritten-digit-recognition/
-├── app.py
-├── digit_recognition_model.keras
-├── requirements.txt
-└── README.md
-```
-
-## Run Locally
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/vtu25590-bot/handwritten-digit-recognition.git
-cd handwritten-digit-recognition
-```
-
-2. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Start the application:
-
-```bash
-streamlit run app.py
-```
-
-## Author
-
-**Lokendra Reddy**
-
-GitHub: [@vtu25590-bot](https://github.com/vtu25590-bot)
+<p align="center">
+  <a href="https://handwritten-digit-recognition-33ridd9arplfnwpbpufhvi.streamlit.app/">
+    <img src="https://img.shields.io/badge/🚀_TRY_LIVE_DEMO-Click_Here-brightgreen?style=for-the-badge" />
+  </a>
+</p>
 
 ---
 
-If you find this project useful, consider giving the repository a star!
+## 🧠 About The Project
 
+A handwritten digit recognition web application powered by **Convolutional Neural Networks (CNN)**, TensorFlow and Streamlit.
 
+Draw any digit from **0 to 9** on the interactive canvas. The trained deep learning model analyzes the drawing and predicts the digit along with its confidence score.
 
+## 🌟 Features
 
-## CNN Model Architecture
+- ✍️ Interactive drawing canvas
+- ⚡ Real-time digit prediction
+- 🎯 Prediction confidence scores
+- 📊 Probability visualization for all 10 digits
+- 🖼️ Processed image preview
+- 🌐 Interactive web application
 
-The project uses a Convolutional Neural Network (CNN) to extract features from handwritten digit images and classify them into 10 categories (0–9).
+## 🏆 Model Performance
 
-### Architecture Flow
+| Metric | Details |
+|---|---|
+| Dataset | MNIST |
+| Training Images | 60,000 |
+| Testing Images | 10,000 |
+| Image Dimensions | 28 × 28 pixels |
+| Model | Convolutional Neural Network |
+| Test Accuracy | **99.1%** |
+
+<sub>Accuracy measured on the MNIST test dataset.</sub>
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Programming |
+| TensorFlow / Keras | Deep Learning |
+| NumPy | Numerical operations |
+| OpenCV | Image preprocessing |
+| Streamlit | Web application |
+| Streamlit Drawable Canvas | Drawing interface |
+
+## 🏗️ CNN Model Architecture
+
+The CNN extracts visual features from handwritten images and classifies them into 10 digit categories.
 
 ```text
 Input Image (28 × 28 × 1)
           |
           v
-Convolutional Layer (32 filters, 3 × 3, ReLU)
+Conv2D (32 filters, 3 × 3, ReLU)
           |
           v
 Max Pooling (2 × 2)
           |
           v
-Convolutional Layer (64 filters, 3 × 3, ReLU)
+Conv2D (64 filters, 3 × 3, ReLU)
           |
           v
 Max Pooling (2 × 2)
@@ -102,10 +81,10 @@ Max Pooling (2 × 2)
 Flatten Layer
           |
           v
-Fully Connected Layer (128 neurons, ReLU)
+Dense (128 neurons, ReLU)
           |
           v
-Output Layer (10 neurons, Softmax)
+Output (10 neurons, Softmax)
           |
           v
 Predicted Digit (0–9)
@@ -116,21 +95,70 @@ Predicted Digit (0–9)
 | Layer | Configuration | Purpose |
 |---|---|---|
 | Input | 28 × 28 × 1 | Accepts grayscale images |
-| Conv2D | 32 filters, 3 × 3 | Extracts basic image features |
-| MaxPooling2D | 2 × 2 | Reduces spatial dimensions |
-| Conv2D | 64 filters, 3 × 3 | Learns deeper image features |
+| Conv2D | 32 filters, 3 × 3 | Extracts basic features |
+| MaxPooling2D | 2 × 2 | Reduces dimensions |
+| Conv2D | 64 filters, 3 × 3 | Learns deeper features |
 | MaxPooling2D | 2 × 2 | Further reduces dimensions |
 | Flatten | — | Converts feature maps into a vector |
 | Dense | 128 neurons, ReLU | Learns classification patterns |
-| Output | 10 neurons, Softmax | Predicts probabilities for digits 0–9 |
+| Output | 10 neurons, Softmax | Predicts digits 0–9 |
 
-### Training Configuration
+### ⚙️ Training Configuration
 
-- Optimizer: Adam
-- Loss Function: Sparse Categorical Crossentropy
-- Evaluation Metric: Accuracy
-- Epochs: 5
-- Batch Size: 64
-- Validation Split: 10%
+- **Optimizer:** Adam
+- **Loss Function:** Sparse Categorical Crossentropy
+- **Evaluation Metric:** Accuracy
+- **Epochs:** 5
+- **Batch Size:** 64
+- **Validation Split:** 10%
 
-The Softmax output produces a probability distribution across all 10 digit classes. The class with the highest probability is selected as the final prediction.
+The Softmax output generates probabilities for all 10 digit classes. The class with the highest probability becomes the final prediction.
+
+## 📂 Project Structure
+
+```text
+handwritten-digit-recognition/
+│
+├── app.py
+├── digit_recognition_model.keras
+├── requirements.txt
+└── README.md
+```
+
+## 💻 Run Locally
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/loki25590/handwritten-digit-recognition.git
+cd handwritten-digit-recognition
+```
+
+**2. Install dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+**3. Run the application**
+
+```bash
+streamlit run app.py
+```
+
+## 👨‍💻 Author
+
+**Lokendra Reddy**
+
+- GitHub: [@loki25590](https://github.com/loki25590)
+- Project Repository: [Handwritten Digit Recognition](https://github.com/loki25590/handwritten-digit-recognition)
+
+---
+
+<p align="center">
+  ⭐ If you find this project interesting, consider giving it a star!
+</p>
+
+<p align="center">
+  <strong>Built with Python, Deep Learning & ❤️</strong>
+</p>
