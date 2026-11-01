@@ -1,1 +1,136 @@
+# Handwritten Digit Recognition
 
+A handwritten digit recognition web application built using **Convolutional Neural Networks (CNN)**, TensorFlow, and Streamlit.
+
+## Project Overview
+
+This project recognizes handwritten digits (0–9) drawn by users on an interactive canvas. A trained CNN model processes the drawing and predicts the digit with a confidence score.
+
+## Features
+
+- Interactive drawing canvas
+- Real-time digit prediction
+- Prediction confidence scores
+- Probability visualization for all 10 digits
+- Processed image preview
+
+## Model Performance
+
+- Dataset: MNIST
+- Training images: 60,000
+- Testing images: 10,000
+- Image dimensions: 28 × 28 pixels
+- Test accuracy: **99.1%**
+
+*Accuracy is measured on the MNIST test dataset.*
+
+## Technologies Used
+
+- Python
+- TensorFlow / Keras
+- NumPy
+- OpenCV
+- Streamlit
+- Streamlit Drawable Canvas
+
+## Project Structure
+
+```text
+handwritten-digit-recognition/
+├── app.py
+├── digit_recognition_model.keras
+├── requirements.txt
+└── README.md
+```
+
+## Run Locally
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/vtu25590-bot/handwritten-digit-recognition.git
+cd handwritten-digit-recognition
+```
+
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Start the application:
+
+```bash
+streamlit run app.py
+```
+
+## Author
+
+**Lokendra Reddy**
+
+GitHub: [@vtu25590-bot](https://github.com/vtu25590-bot)
+
+---
+
+If you find this project useful, consider giving the repository a star!
+
+
+
+
+## CNN Model Architecture
+
+The project uses a Convolutional Neural Network (CNN) to extract features from handwritten digit images and classify them into 10 categories (0–9).
+
+### Architecture Flow
+
+```text
+Input Image (28 × 28 × 1)
+          |
+          v
+Convolutional Layer (32 filters, 3 × 3, ReLU)
+          |
+          v
+Max Pooling (2 × 2)
+          |
+          v
+Convolutional Layer (64 filters, 3 × 3, ReLU)
+          |
+          v
+Max Pooling (2 × 2)
+          |
+          v
+Flatten Layer
+          |
+          v
+Fully Connected Layer (128 neurons, ReLU)
+          |
+          v
+Output Layer (10 neurons, Softmax)
+          |
+          v
+Predicted Digit (0–9)
+```
+
+### Layer Details
+
+| Layer | Configuration | Purpose |
+|---|---|---|
+| Input | 28 × 28 × 1 | Accepts grayscale images |
+| Conv2D | 32 filters, 3 × 3 | Extracts basic image features |
+| MaxPooling2D | 2 × 2 | Reduces spatial dimensions |
+| Conv2D | 64 filters, 3 × 3 | Learns deeper image features |
+| MaxPooling2D | 2 × 2 | Further reduces dimensions |
+| Flatten | — | Converts feature maps into a vector |
+| Dense | 128 neurons, ReLU | Learns classification patterns |
+| Output | 10 neurons, Softmax | Predicts probabilities for digits 0–9 |
+
+### Training Configuration
+
+- Optimizer: Adam
+- Loss Function: Sparse Categorical Crossentropy
+- Evaluation Metric: Accuracy
+- Epochs: 5
+- Batch Size: 64
+- Validation Split: 10%
+
+The Softmax output produces a probability distribution across all 10 digit classes. The class with the highest probability is selected as the final prediction.
