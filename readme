@@ -1,120 +1,101 @@
-# ✨ Handwritten Digit Recognition
+# ⚡ **HANDWRITTEN DIGIT RECOGNITION**
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/CNN-Deep%20Learning-8A2BE2?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+  <strong>🚀 ARTIFICIAL INTELLIGENCE | DEEP LEARNING | COMPUTER VISION 🚀</strong>
 </p>
 
-<p align="center">
-  🚀 <strong>Draw a digit. Let AI recognize it!</strong>
-</p>
+## 🟢 **🌐 LIVE DEMO — TRY IT NOW!**
 
-<p align="center">
-  <a href="https://handwritten-digit-recognition-33ridd9arplfnwpbpufhvi.streamlit.app/">
-    <img src="https://img.shields.io/badge/🚀_TRY_LIVE_DEMO-Click_Here-brightgreen?style=for-the-badge" />
-  </a>
-</p>
+# 👉 [**CLICK HERE TO OPEN THE LIVE WEBSITE**](https://handwritten-digit-recognition-33ridd9arplfnwpbpufhvi.streamlit.app/)
+
+**✍️ Draw a digit. 🧠 Let AI recognize it. ⚡ Get instant predictions!**
 
 ---
 
-## 🧠 About The Project
+## 🔵 **🧠 01. PROJECT OVERVIEW**
 
-A handwritten digit recognition web application powered by **Convolutional Neural Networks (CNN)**, TensorFlow and Streamlit.
+An AI-powered handwritten digit recognition application built using **Convolutional Neural Networks (CNN)**, **TensorFlow**, and **Streamlit**.
 
-Draw any digit from **0 to 9** on the interactive canvas. The trained deep learning model analyzes the drawing and predicts the digit along with its confidence score.
+The application recognizes handwritten digits from **0 to 9** using an interactive drawing canvas and provides prediction confidence scores.
 
-## 🌟 Features
+## 🟣 **✨ 02. KEY FEATURES**
 
-- ✍️ Interactive drawing canvas
-- ⚡ Real-time digit prediction
-- 🎯 Prediction confidence scores
-- 📊 Probability visualization for all 10 digits
-- 🖼️ Processed image preview
-- 🌐 Interactive web application
+| Feature | Description |
+|:---|:---|
+| ✍️ **Interactive Canvas** | Draw handwritten digits |
+| ⚡ **Real-Time Prediction** | Instant digit recognition |
+| 🎯 **Confidence Score** | Prediction confidence |
+| 📊 **Probability Chart** | Visualize all 10 digit probabilities |
+| 🖼️ **Image Processing** | Preview processed images |
+| 🌐 **Live Deployment** | Access the application online |
 
-## 🏆 Model Performance
+## 🟢 **🏆 03. MODEL PERFORMANCE**
 
-| Metric | Details |
-|---|---|
-| Dataset | MNIST |
-| Training Images | 60,000 |
-| Testing Images | 10,000 |
-| Image Dimensions | 28 × 28 pixels |
-| Model | Convolutional Neural Network |
-| Test Accuracy | **99.1%** |
+### **99.1% TEST ACCURACY**
 
-<sub>Accuracy measured on the MNIST test dataset.</sub>
+| 📌 Metric | 📊 Result |
+|:---|:---|
+| **Dataset** | MNIST |
+| **Training Images** | 60,000 |
+| **Testing Images** | 10,000 |
+| **Image Dimensions** | 28 × 28 Pixels |
+| **Architecture** | CNN |
+| **Test Accuracy** | **99.1%** |
 
-## 🛠️ Technologies Used
+*Accuracy measured on the MNIST test dataset.*
 
-| Technology | Purpose |
-|---|---|
-| Python | Programming |
-| TensorFlow / Keras | Deep Learning |
-| NumPy | Numerical operations |
-| OpenCV | Image preprocessing |
-| Streamlit | Web application |
-| Streamlit Drawable Canvas | Drawing interface |
+## 🟠 **🛠️ 04. TECHNOLOGY STACK**
 
-## 🏗️ CNN Model Architecture
+- 🐍 **Python** — Programming
+- 🧠 **TensorFlow / Keras** — Deep Learning
+- 🔢 **NumPy** — Numerical Computing
+- 👁️ **OpenCV** — Image Processing
+- 🌐 **Streamlit** — Web Application
+- ✏️ **Drawable Canvas** — User Input
 
-The CNN extracts visual features from handwritten images and classifies them into 10 digit categories.
+## 🔴 **🏗️ 05. CNN MODEL ARCHITECTURE**
+
+**Convolutional Neural Network Workflow**
 
 ```text
-Input Image (28 × 28 × 1)
-          |
-          v
-Conv2D (32 filters, 3 × 3, ReLU)
-          |
-          v
-Max Pooling (2 × 2)
-          |
-          v
-Conv2D (64 filters, 3 × 3, ReLU)
-          |
-          v
-Max Pooling (2 × 2)
-          |
-          v
-Flatten Layer
-          |
-          v
-Dense (128 neurons, ReLU)
-          |
-          v
-Output (10 neurons, Softmax)
-          |
-          v
-Predicted Digit (0–9)
+       INPUT IMAGE (28 × 28 × 1)
+                  |
+                  v
+       CONV2D (32 FILTERS, ReLU)
+                  |
+                  v
+          MAX POOLING (2 × 2)
+                  |
+                  v
+       CONV2D (64 FILTERS, ReLU)
+                  |
+                  v
+          MAX POOLING (2 × 2)
+                  |
+                  v
+             FLATTEN
+                  |
+                  v
+       DENSE (128 NEURONS, ReLU)
+                  |
+                  v
+       OUTPUT (10 NEURONS, SOFTMAX)
+                  |
+                  v
+          PREDICTED DIGIT (0–9)
 ```
 
-### Layer Details
+### ⚙️ **Training Configuration**
 
-| Layer | Configuration | Purpose |
-|---|---|---|
-| Input | 28 × 28 × 1 | Accepts grayscale images |
-| Conv2D | 32 filters, 3 × 3 | Extracts basic features |
-| MaxPooling2D | 2 × 2 | Reduces dimensions |
-| Conv2D | 64 filters, 3 × 3 | Learns deeper features |
-| MaxPooling2D | 2 × 2 | Further reduces dimensions |
-| Flatten | — | Converts feature maps into a vector |
-| Dense | 128 neurons, ReLU | Learns classification patterns |
-| Output | 10 neurons, Softmax | Predicts digits 0–9 |
+| Parameter | Configuration |
+|:---|:---|
+| **Optimizer** | Adam |
+| **Loss Function** | Sparse Categorical Crossentropy |
+| **Epochs** | 5 |
+| **Batch Size** | 64 |
+| **Validation Split** | 10% |
 
-### ⚙️ Training Configuration
-
-- **Optimizer:** Adam
-- **Loss Function:** Sparse Categorical Crossentropy
-- **Evaluation Metric:** Accuracy
-- **Epochs:** 5
-- **Batch Size:** 64
-- **Validation Split:** 10%
-
-The Softmax output generates probabilities for all 10 digit classes. The class with the highest probability becomes the final prediction.
-
-## 📂 Project Structure
+## 🔷 **📂 06. PROJECT STRUCTURE**
 
 ```text
 handwritten-digit-recognition/
@@ -125,40 +106,41 @@ handwritten-digit-recognition/
 └── README.md
 ```
 
-## 💻 Run Locally
+## 🟡 **💻 07. RUN THE PROJECT LOCALLY**
 
-**1. Clone the repository**
+**STEP 1 — Clone Repository**
 
 ```bash
 git clone https://github.com/loki25590/handwritten-digit-recognition.git
 cd handwritten-digit-recognition
 ```
 
-**2. Install dependencies**
+**STEP 2 — Install Dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-**3. Run the application**
+**STEP 3 — Launch Application**
 
 ```bash
 streamlit run app.py
 ```
 
-## 👨‍💻 Author
+## 🟣 **👨‍💻 08. DEVELOPER**
 
-**Lokendra Reddy**
+### **LOKENDRA REDDY**
 
-- GitHub: [@loki25590](https://github.com/loki25590)
-- Project Repository: [Handwritten Digit Recognition](https://github.com/loki25590/handwritten-digit-recognition)
+🎓 **Computer Science & Engineering — AI & Data Science**
+
+🐙 **GitHub:** [loki25590](https://github.com/loki25590)
+
+📁 **Repository:** [Handwritten Digit Recognition](https://github.com/loki25590/handwritten-digit-recognition)
 
 ---
 
-<p align="center">
-  ⭐ If you find this project interesting, consider giving it a star!
-</p>
+## ⭐ **LIKE THIS PROJECT?**
 
-<p align="center">
-  <strong>Built with Python, Deep Learning & ❤️</strong>
-</p>
+**Give this repository a STAR ⭐ and support the project!**
+
+# 🚀 **BUILT WITH PYTHON, DEEP LEARNING & PASSION**
